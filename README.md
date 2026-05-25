@@ -9,11 +9,7 @@ A [yazi](https://yazi-rs.github.io) previewer plugin for `.docx` files using [do
 
 ## Installation
 
-```bash
-ya pkg add bgreenwell/yazi-plugin-doxx
-```
-
-Or manually clone into your yazi plugins directory:
+Clone into your yazi plugins directory:
 
 ```bash
 git clone https://github.com/bgreenwell/yazi-plugin-doxx \

@@ -2,7 +2,7 @@ local M = {}
 
 function M:peek(job)
 	local child, err = Command("doxx")
-		:args({ tostring(job.file.url), "--export", "ansi" })
+		:arg({ tostring(job.file.url), "--export", "ansi" })
 		:stdout(Command.PIPED)
 		:stderr(Command.PIPED)
 		:spawn()

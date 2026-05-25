@@ -4,7 +4,7 @@ A [yazi](https://yazi-rs.github.io) previewer plugin for `.docx` files using [do
 
 ## Requirements
 
-- [yazi](https://yazi-rs.github.io) 0.3+
+- [yazi](https://yazi-rs.github.io) 26.x+
 - [doxx](https://github.com/bgreenwell/doxx) installed and on your `$PATH`
 
 ## Installation
@@ -28,8 +28,11 @@ Add the following to your `~/.config/yazi/yazi.toml`:
 [plugin]
 prepend_previewers = [
   { mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document", run = "doxx" },
+  { url = "*.docx", run = "doxx" },
 ]
 ```
+
+The `url` entry catches files that your system's MIME detection doesn't identify correctly (e.g. reports `application/octet-stream`).
 
 ## License
 

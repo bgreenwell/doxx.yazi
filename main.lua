@@ -8,7 +8,7 @@ function M:peek(job)
 		:spawn()
 
 	if not child then
-		ya.err("yazi-plugin-doxx: failed to spawn doxx (" .. tostring(err) .. ")")
+		ya.err("doxx.yazi: failed to spawn doxx (" .. tostring(err) .. ")")
 		return
 	end
 

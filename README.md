@@ -1,4 +1,4 @@
-# yazi-plugin-doxx
+# doxx.yazi
 
 A [yazi](https://yazi-rs.github.io) previewer plugin for `.docx` files using [doxx](https://github.com/bgreenwell/doxx).
 
@@ -9,11 +9,15 @@ A [yazi](https://yazi-rs.github.io) previewer plugin for `.docx` files using [do
 
 ## Installation
 
-Clone into your yazi plugins directory:
+```bash
+ya pkg add bgreenwell/doxx
+```
+
+Or manually:
 
 ```bash
-git clone https://github.com/bgreenwell/yazi-plugin-doxx \
-  ~/.config/yazi/plugins/yazi-plugin-doxx.yazi
+git clone https://github.com/bgreenwell/doxx.yazi \
+  ~/.config/yazi/plugins/doxx.yazi
 ```
 
 ## Setup
@@ -23,7 +27,7 @@ Add the following to your `~/.config/yazi/yazi.toml`:
 ```toml
 [plugin]
 prepend_previewers = [
-  { mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document", run = "yazi-plugin-doxx" },
+  { mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document", run = "doxx" },
 ]
 ```
 
